@@ -54,7 +54,7 @@ var switchMenuToActive = function () {
 
   // Add 'active' to menu button if not already there
   classes = document.querySelector("#navMenuButton").className;
-  if (classes.indexOf("active") == -1) {
+  if (classes.indexOf("active") === -1) {
     classes += " active";
     document.querySelector("#navMenuButton").className = classes;
   }
@@ -128,7 +128,8 @@ function buildAndShowHomeHTML (categories) {
 
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
     },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+    false);
+    // False here because we are getting just regular HTML from the server, so no need to process JSON.
 }
 
 
